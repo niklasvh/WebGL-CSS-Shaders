@@ -183,7 +183,6 @@ var CSSshaders = (function( window, d, mat4 ) {
                                 
                                 })( window.getComputedStyle( element ) );
                                
-                                
                                 el.data.hover = data.params;
                                 el.data.hoverElement = d.querySelector( data.pseudoElement );
                        
@@ -536,6 +535,7 @@ var CSSshaders = (function( window, d, mat4 ) {
             switch( func ) {
                                         
                 case "linear":
+                case "cubic-bezier(0, 0, 1, 1)":
                     return TWEEN.Easing.Linear.None;
                     break;
                                         
@@ -1002,7 +1002,7 @@ var CSSshaders = (function( window, d, mat4 ) {
             
             gl.uniform2f( mouseLocation, 0, 0 );
             el.addEventListener("mousemove", function(e) {
-                 gl.uniform2f( mouseLocation, e.layerX, e.layerY );
+                gl.uniform2f( mouseLocation, e.layerX, e.layerY );
                 
             }, false);
         }  
