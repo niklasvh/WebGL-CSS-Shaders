@@ -182,8 +182,7 @@ var CSSshaders = (function( window, d, mat4 ) {
                                     };
                                 
                                 })( window.getComputedStyle( element ) );
-                                console.log('syp');
-                                console.log(el.data.transition);
+                               
                                 
                                 el.data.hover = data.params;
                                 el.data.hoverElement = d.querySelector( data.pseudoElement );
@@ -704,7 +703,7 @@ var CSSshaders = (function( window, d, mat4 ) {
 
         urls.forEach(function( e, i ) {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', e + "?" + Math.random(), true);
+            xhr.open('GET', e, true);
 
             xhr.onload = function(e) {
                 count++;
