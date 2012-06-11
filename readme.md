@@ -3,12 +3,14 @@
 For more information and demos, please read the introduction <a href="http://experiments.hertzen.com/css-shaders/index.html">here</a>.
 
 **Usage**
+
 To have the script parse all the CSS automatically (very experimental), just call:
+
 `CSSshaders.init();`
 
 To manually add a shader:
 
-`CSSshaders.add( element, shaderParameters );` -returns shader element
+`CSSshaders.add( element, shaderParameters );` - returns shader element
 
 Example:
 
